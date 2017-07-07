@@ -5,12 +5,19 @@ import { Animal } from './animal.model';
   selector: 'animal-list',
   template:`
   <ul>
+    <div class = "col-md-6">
+      <h2>List of registered animals</h2>
+    </div>
+    <div class = "col-md-6">
+      <p>Change Sorting?</p>
+    </div>
     <select (change)="onChange($event.target.value)">
       <option value = "normal">Normal</option>
       <option value = "Youngest">Youngest</option>
       <option value = "Oldest">Oldest</option>
     </select>
-    <ul *ngFor="let currentAnimal of childAnimals | age:filterByAge"><div class = "panel panel-default"><li>Name: {{currentAnimal.name}}</li><li>Species: {{currentAnimal.species}}</li><li>Age: {{currentAnimal.age}}</li><br><button (click)="editButton(currentAnimal)">Edit Animal</button></div></ul><br>
+    <br><br><br>
+    <ul *ngFor="let currentAnimal of childAnimals | age:filterByAge"><div class = "panel panel-default"><li><h2>Name: {{currentAnimal.name}}</h2></li><li>Species: {{currentAnimal.species}}</li><li>Age: {{currentAnimal.age}}</li><li>Diet: {{currentAnimal.diet}}</li><li> Location: {{currentAnimal.location}}</li><li>Amount of Caretakers: {{currentAnimal.caretakers}}</li><li>Sex: {{currentAnimal.sex}}</li><li>They Like: {{currentAnimal.likes}}</li><li id = "dislikes">They Dislike: {{currentAnimal.dislikes}}<br><button (click)="editButton(currentAnimal)">Edit Animal</button></div></ul><br>
   </ul>
   `
 })

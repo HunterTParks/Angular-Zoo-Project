@@ -4,7 +4,7 @@ import { Animal } from "./animal.model";
 @Component({
   selector: 'animal-add',
   template: `
-  <div class = "panel panel-success formStyling">
+  <div>
     <form *ngIf="animalForm">
       <h3>Add Animal</h3>
       <label for="name">Add Name:</label>

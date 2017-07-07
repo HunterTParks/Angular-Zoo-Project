@@ -1,3 +1,16 @@
 .animalList {
-  margin-left: 20px;
+
+}
+
+li {
+  margin-left: 30px;
+  margin-bottom: 5px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.col-md-6 {
+  margin-bottom: 10px;
 }
