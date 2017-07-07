@@ -4,28 +4,39 @@ import { Animal } from "./animal.model";
 @Component({
   selector: 'animal-add',
   template: `
-  <form #animalForm>
-    <h3>Edit Animal</h3>
-    <label for="name">Add Name:</label>
-    <input #animalName required>
-    <label for="species">Add Species:</label>
-    <input #animalSpecies required>
-    <label for="age">Add Age:</label>
-    <input #animalAge required>
-    <label for="diet">Add Diet:</label>
-    <input #animalDiet required>
-    <label for="location">Edit location:</label>
-    <input #animallocation required>
-    <label for="caretakers">Edit caretakers:</label>
-    <input #animalcaretakers required>
-    <label for="sex">Edit Sex:</label>
-    <input #animalSex required>
-    <label for="likes">Edit Likes:</label>
-    <input #animalLikes required>
-    <label for="dislikes">Edit Dislikes:</label>
-    <input #animalDislikes required>
-    <button (click)="submitForm(animalName.value, animalSpecies.value, animalAge.value, animalDiet.value, animallocation.value, animalcaretakers.value, animalSex.value, animalLikes.value, animalDislikes.value)">Done!</button>
-  </form>
+  <div class = "panel panel-success formStyling">
+    <form *ngIf="animalForm">
+      <h3>Add Animal</h3>
+      <label for="name">Add Name:</label>
+      <input #animalName required>
+      <br>
+      <label for="species">Add Species:</label>
+      <input #animalSpecies required>
+      <br>
+      <label for="age">Add Age:</label>
+      <input #animalAge required>
+      <br>
+      <label for="diet">Add Diet:</label>
+      <input #animalDiet required>
+      <br>
+      <label for="location">Edit location:</label>
+      <input #animallocation required>
+      <br>
+      <label for="caretakers">Edit caretakers:</label>
+      <input #animalcaretakers required>
+      <br>
+      <label for="sex">Edit Sex:</label>
+      <input #animalSex required>
+      <br>
+      <label for="likes">Edit Likes:</label>
+      <input #animalLikes required>
+      <br>
+      <label for="dislikes">Edit Dislikes:</label>
+      <input #animalDislikes required>
+      <br>
+      <button (click)="submitForm(animalName.value, animalSpecies.value, animalAge.value, animalDiet.value, animallocation.value, animalcaretakers.value, animalSex.value, animalLikes.value, animalDislikes.value)">Done!</button>
+    </form>
+  </div>
   `
 })
 

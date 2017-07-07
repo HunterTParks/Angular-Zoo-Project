@@ -7,7 +7,7 @@ import { AnimalEditComponent } from './animal-edit.component';
 import { AddAnimalComponent } from './animal-add.component';
 
 @NgModule({
-  imports: [ BrowserModule, FormsModule],
+  imports: [ BrowserModule, FormsModule ],
   declarations: [ AppComponent, AnimalListComponent, AnimalEditComponent, AddAnimalComponent ],
   bootstrap:    [ AppComponent ]
 })
