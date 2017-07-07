@@ -1,7 +1,7 @@
 ## Angular Zoo Information Program
 ###### An Application made by *_Hunter Parks_*
 
-<img src = "https://www.naturalhighsafaris.com/natural-high/web/images/made/uploads/serengeti-nomad-cheetah_940_529_90_c1_c_c.jpg" alt = "picture" style = "width: 300px;"/>
+<img src = "https://www.naturalhighsafaris.com/natural-high/web/images/made/uploads/serengeti-nomad-cheetah_940_529_90_c1_c_c.jpg" alt = "picture" style = "width: 200px;"/>
 <br>
 This program allows the user to see the lineup of different animals at their 'Zoo.' You will be able to find specific animal's names, Species, age, etc...  With this program, you can edit existing animals properties and register new animals. You can also sort the animals in this program based maturity.
 
