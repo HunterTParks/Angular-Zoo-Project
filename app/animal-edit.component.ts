@@ -7,11 +7,11 @@ import { Animal } from './animal.model';
   <div *ngIf="childSelectedAnimal">
     <h3>Edit Animal</h3>
     <label for="name">Edit Name:</label>
-    <input [(ngModel])="childSelectedAnimal.name" autofocus>
+    <input [(ngModel)]="childSelectedAnimal.name" autofocus>
     <label for="species">Edit Species:</label>
-    <input [(ngModel])="childSelectedAnimal.species" autofocus>
+    <input [(ngModel)]="childSelectedAnimal.species">
     <label for="age">Edit Age:</label>
-    <input [(ngModel])="childSelectedAnimal.age" autofocus>
+    <input [(ngModel)]="childSelectedAnimal.age">
     <button (click)="clickedFinishedEditing()">Done!</button>
   </div>
   `
