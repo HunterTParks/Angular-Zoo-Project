@@ -29,8 +29,6 @@ export class AgePipe implements PipeTransform {
     else {
       return input;
     }
-
-
     return output;
   }
 }
