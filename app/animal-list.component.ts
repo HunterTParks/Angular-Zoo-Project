@@ -5,7 +5,11 @@ import { Animal } from './animal.model';
   selector: 'animal-list',
   template:`
   <ul>
-    <ul *ngFor="let currentAnimal of childAnimals"><div class = "panel panel-default"><li>Name: {{currentAnimal.name}}</li><li>Species: {{currentAnimal.species}}</li><li>Age: {{currentAnimal.age}}</li><br><button (click)="editButton(currentAnimal)">Edit Animal</button></div></ul><br>
+    <select (change)="onChange($event.target.value)">
+      <option value = "normal">Normal</option>
+      <option value = "youngest-to-oldest">Youngest to Oldest</option>
+    </select>
+    <ul *ngFor="let currentAnimal of childAnimals | age:filterByAge"><div class = "panel panel-default"><li>Name: {{currentAnimal.name}}</li><li>Species: {{currentAnimal.species}}</li><li>Age: {{currentAnimal.age}}</li><br><button (click)="editButton(currentAnimal)">Edit Animal</button></div></ul><br>
   </ul>
   `
 })
@@ -14,7 +18,13 @@ export class AnimalListComponent {
   @Input() childAnimals: Animal[];
   @Output() clickSender = new EventEmitter();
 
+  filterByAge: string = "normal";
+
   editButton(animalToEdit){
     this.clickSender.emit(animalToEdit);
+  }
+
+  onChange(optionFromMenu){
+    this.filterByAge = optionFromMenu;
   }
 }
