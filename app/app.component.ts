@@ -8,7 +8,7 @@ import { Animal } from './animal.model';
     <div class="jumbotron">
       <h2>Zoooooo</h2>
     </div>
-
+    <animal-list [childAnimals] = "listOfAnimals"></animal-list>
   </div>
   `
 })

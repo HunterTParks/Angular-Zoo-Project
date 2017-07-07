@@ -12,5 +12,5 @@ import { Animal } from './animal.model';
 
 export class AnimalListComponent {
   @Input() childAnimals: Animal[];
-  
+
 }
