@@ -7,7 +7,8 @@ import { Animal } from './animal.model';
   <ul>
     <select (change)="onChange($event.target.value)">
       <option value = "normal">Normal</option>
-      <option value = "youngest-to-oldest">Youngest to Oldest</option>
+      <option value = "Youngest">Youngest</option>
+      <option value = "Oldest">Oldest</option>
     </select>
     <ul *ngFor="let currentAnimal of childAnimals | age:filterByAge"><div class = "panel panel-default"><li>Name: {{currentAnimal.name}}</li><li>Species: {{currentAnimal.species}}</li><li>Age: {{currentAnimal.age}}</li><br><button (click)="editButton(currentAnimal)">Edit Animal</button></div></ul><br>
   </ul>

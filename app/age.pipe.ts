@@ -9,15 +9,28 @@ import { Animal } from './animal.model';
 export class AgePipe implements PipeTransform {
   transform(input: Animal[], desiredSorting){
     var output: Animal[] = [];
-    var temp = null;
-    var cou = 0;
-    console.log("TESTING BEGINING OF STUFF input length is" + input.length);
 
-    if(desiredSorting === "youngest-to-oldest"){
-
+    if(desiredSorting === "Oldest"){
+      for(var i = 0; i <= input.length - 1; i++){
+        console.log(i);
+        if(input[i].age >= 2){
+          output.push(input[i]);
+        }
+      }
     }
-  
+    else if(desiredSorting === "Youngest"){
+      for(var i = 0; i <= input.length - 1; i++){
+        console.log(i);
+        if(input[i].age < 2){
+          output.push(input[i]);
+        }
+      }
+    }
+    else {
+      return input;
+    }
 
-    return input;
+
+    return output;
   }
 }
